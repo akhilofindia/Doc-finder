@@ -4,7 +4,7 @@ A fully client-side React application that allows users to search, filter, and s
 
 ## 🚀 Live Demo
 <!-- Add your live deployment link here if available -->
-[View Live App](https://your-deployment-link.com)
+[View Live App](https://akhilraj.netlify.app/)
 
 ---
 
