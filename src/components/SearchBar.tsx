@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { Search } from "lucide-react";
 
@@ -58,10 +57,10 @@ const SearchBar: React.FC<SearchBarProps> = ({ doctors, value, onChange }) => {
           value={value}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          onFocus={() => value.trim() && setSuggestions.length > 0 && setIsOpen(true)}
+          onFocus={() => value.trim() && suggestions.length > 0 && setIsOpen(true)}
           onBlur={handleBlur}
           placeholder="Search doctors, specialties..."
-          className="w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+          className="w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-black bg-white" // Added text-black and bg-white
           data-testid="autocomplete-input"
         />
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
@@ -76,7 +75,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ doctors, value, onChange }) => {
               <li
                 key={suggestion.id}
                 onClick={() => handleSelectSuggestion(suggestion.name)}
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-black" // Added text-black
                 data-testid="suggestion-item"
               >
                 {suggestion.name}
